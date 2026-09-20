@@ -103,7 +103,7 @@ storage:
 # When storing a new memory, if similarity with an existing bucket exceeds
 # this value (0-100), merge instead of creating a new one
 # 存新记忆时，如果与已有桶的相似度超过此值（0-100），则合并而非新建
-merge_threshold: 82              # 小克版：从 75 提到 82，减少误合并，保留对话独立性
+merge_threshold: 82              # 小克版实验初始值（原 75）：减少误合并，保留对话独立性；需要根据实际使用调整
 
 # --- Dehydration API / 脱水压缩 API 配置 ---
 # Uses a cheap LLM for intelligent compression. API is required; if the
@@ -137,8 +137,8 @@ dehydration:
 # Simulates Ebbinghaus forgetting curve, auto-archives inactive memories
 # 模拟艾宾浩斯遗忘曲线，自动归档不活跃的记忆
 decay:
-  lambda: 0.03                    # 小克版：从 0.05 降到 0.03，伴侣场景记忆衰减更慢
-  threshold: 0.2                  # 小克版：从 0.3 降到 0.2，更少记忆被归档
+  lambda: 0.03                    # 小克版实验初始值（原 0.05）：伴侣场景记忆衰减更慢，需根据实际使用校准
+  threshold: 0.2                  # 小克版实验初始值（原 0.3）：更少记忆被归档，需根据实际使用校准
   check_interval_hours: 24        # Check interval (hours) / 衰减检查间隔（小时）
   emotion_weights:
     base: 1.0                     # Base weight / 基础权重
