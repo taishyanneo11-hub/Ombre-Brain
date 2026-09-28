@@ -195,7 +195,7 @@ docker compose -f docker-compose.user.yml up -d
 1. 打开 [aistudio.google.com/apikey](https://aistudio.google.com/apikey)
 2. 用 Google 账号登录 → 点 **Create API key** → 复制
 3. 推荐模型（均为免费额度，以官网实时信息为准）：
-   - 脱水/打标模型：`gemini-2.0-flash`（无思考开销，稳定，免费）
+   - 脱水/打标模型：`gemini-3.1-flash-lite`（稳定，免费；`gemini-2.0-flash` / `gemini-2.5-flash` 已对新用户下线）
    - 向量化模型：`gemini-embedding-001`（1500 req/day，3072 维，免费）
    - Base URL：`https://generativelanguage.googleapis.com/v1beta/openai/`
 
@@ -701,7 +701,7 @@ docker compose -f deploy/docker-compose.yml up -d
 | 参数 | 说明 | 推荐值 |
 |---|---|---|
 | `transport` | `stdio`（本地）/ `streamable-http`（远程） | Docker 部署用 `streamable-http` |
-| `dehydration.model` | 脱水/打标 LLM 模型 | `gemini-2.0-flash` |
+| `dehydration.model` | 脱水/打标 LLM 模型 | `gemini-3.1-flash-lite` |
 | `dehydration.base_url` | LLM API 地址 | `https://generativelanguage.googleapis.com/v1beta/openai/` |
 | `dehydration.max_tokens` | 模型最大输出 token | `4096`（必须足够大，否则 JSON 截断导致域分类失败） |
 | `dehydration.timeout_seconds` | LLM 请求超时秒数 | 国内服务器连云端 API 可设 `120` 或更高 |
