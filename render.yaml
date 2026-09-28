@@ -26,7 +26,7 @@ services:
       - key: OMBRE_COMPRESS_BASE_URL
         sync: false          # e.g. https://generativelanguage.googleapis.com/v1beta/openai/
       - key: OMBRE_COMPRESS_MODEL
-        sync: false          # e.g. gemini-2.5-flash
+        sync: false          # e.g. gemini-3.1-flash-lite
       # Render services are public as soon as they boot.  Generate a secret at
       # provisioning time so an anonymous first request cannot claim setup.
       - key: OMBRE_DASHBOARD_PASSWORD

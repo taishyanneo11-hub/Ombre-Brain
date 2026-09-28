@@ -2862,7 +2862,7 @@
           <select id="dehy-preset" onchange="applyDehyPreset()" style="flex:1;">
             <option value="">— 选一下自动填好 URL + 模型名 —</option>
             <option value="deepseek">DeepSeek（deepseek-chat）</option>
-            <option value="gemini">Gemini（gemini-2.5-flash-lite）</option>
+            <option value="gemini">Gemini（gemini-3.1-flash-lite）</option>
             <option value="siliconflow">硅基流动 SiliconFlow（DeepSeek-V3，免费额度）</option>
             <option value="anthropic">Anthropic（claude-3-5-haiku）</option>
             <option value="custom">自定义</option>
@@ -2882,7 +2882,7 @@
         </div>
         <div class="config-row" style="align-items:center;">
           <label>Model</label>
-          <input type="text" id="cfg-dehy-model" placeholder="gemini-2.5-flash-lite" style="flex:1;" />
+          <input type="text" id="cfg-dehy-model" placeholder="gemini-3.1-flash-lite" style="flex:1;" />
           <button type="button" onclick="fetchModels('dehy')" title="获取模型列表 / Fetch model list" style="margin-left:6px;padding:0 10px;height:32px;font-size:11px;white-space:nowrap;display:inline-flex;align-items:center;gap:4px;"><i data-lucide="download"></i> 获取</button>
         </div>
         <div id="cfg-dehy-model-list" class="model-list-dropdown"></div>
@@ -7655,7 +7655,7 @@ var EMBED_PRESETS = {
 };
 var DEHY_PRESETS = {
   deepseek:    { format: 'openai_compat', base_url: 'https://api.deepseek.com/v1', model: 'deepseek-chat' },
-  gemini:      { format: 'openai_compat', base_url: 'https://generativelanguage.googleapis.com/v1beta/openai/', model: 'gemini-2.5-flash-lite' },
+  gemini:      { format: 'openai_compat', base_url: 'https://generativelanguage.googleapis.com/v1beta/openai/', model: 'gemini-3.1-flash-lite' },
   siliconflow: { format: 'openai_compat', base_url: 'https://api.siliconflow.cn/v1', model: 'deepseek-ai/DeepSeek-V3' },
   anthropic:   { format: 'anthropic',     base_url: 'https://api.anthropic.com', model: 'claude-3-5-haiku-latest' },
   custom:      { format: 'openai_compat', base_url: '', model: '' }

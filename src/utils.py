@@ -421,7 +421,7 @@ def load_config(config_path: Optional[str] = None) -> dict:
         "buckets_dir": os.path.join(project_root, "buckets"),
         "merge_threshold": 75,
         "dehydration": {
-            "model": "gemini-2.0-flash",
+            "model": "gemini-3.1-flash-lite",
             "base_url": "https://generativelanguage.googleapis.com/v1beta/openai/",
             "api_key": "",
             "max_tokens": 4096,
